@@ -17,7 +17,7 @@ document.onkeydown = function (e) {
     var new_slide = prompt("Enter slide number (1 to "+num_slides+"):");
     new_slide = Math.round(new_slide);
 
-    if (cur_slide >=1 && cur_slide <=num_slides) {
+    if (new_slide >=1 && new_slide <=num_slides) {
       cur_slide = new_slide;
       doMove = true;
     }
