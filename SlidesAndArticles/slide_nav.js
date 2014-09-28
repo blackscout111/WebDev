@@ -8,14 +8,15 @@ document.onkeydown = function (e) {
   var url = location.href;  //Save down the URL without hash.
 
   // @@ debug
-  console.log("keyCode= " + e.keyCode);
-  console.log("url= " + url);
-  console.log("cur_slide= " + cur_slide);
+  // console.log("keyCode= " + e.keyCode);
+  // console.log("url= " + url);
+  // console.log("cur_slide= " + cur_slide);
 
   // Prompt to jump to a slide
-  if (e.keyCode === 32){
+  if (e.keyCode === 71){
     var new_slide = prompt("Enter slide number (1 to "+num_slides+"):");
     new_slide = Math.round(new_slide);
+    // console.log("new_slide= "+new_slide);
 
     if (new_slide >=1 && new_slide <=num_slides) {
       cur_slide = new_slide;
@@ -38,8 +39,10 @@ document.onkeydown = function (e) {
   }
 
   if (doMove) {
+    doMove = false;
+
     // @@ debug
-    console.log('Moving to #'+cur_slide);
+    // console.log('Moving to #'+cur_slide);
 
     location.href = "#"+cur_slide;         //Go to the target element.
     history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
