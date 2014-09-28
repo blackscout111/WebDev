@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>HTML Article Template</title>
+  <meta charset="utf-8">
+  <link href="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/SlidesAndArticles/style.css" rel="stylesheet" type="text/css"/>
+  <link href="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/SlidesAndArticles/style_article.css" rel="stylesheet" type="text/css"/>
+
+  <!-- Script for catching JS errors -->
+  <script src="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/error_alert.js"></script>
+  
+  <!-- MathJax -->
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+  <script src="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/mathjax_config.js"></script>
+</head>
+<body>
+
+  <section class="article">
+    <h1>An Example Article</h1>
+
+    <h2>Some Equations You May Have Heard Of</h2>
+    Have you heard of the plank equation $E = \hbar\omega$?
+
+    How about this one?
+    \begin{equation}
+      E = \gamma m c^2 \ge 0
+    \end{equation}
+
+    Or this one?
+    \begin{equation}
+      s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
+    \end{equation}
+
+    <h2>How About a Theorem and Definition?</h2>
+    Heres a theorem:
+    <div class="theorem">
+      There are no natural numbers
+      $\natural = (1, 2, 3, \ldots)$
+      $x$, $y$, and $z$ such that
+      $x^n + y^n = z^n$, in which $n$
+      is a natural number greater than 2.
+    </div>
+    <div class="definition">
+      A set $C$ is <i>convex</i> if for all
+      $x,y \in C$ and for all
+      $\alpha \in [0,1]$ the point
+      $\alpha x + (1-\alpha) y \in C$.
+    </div>
+  </section>
+
+</body>
+</html>

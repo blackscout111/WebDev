@@ -1,0 +1,83 @@
+<html>
+<head>
+  <title>HTML Slides Template</title>
+  <meta charset="utf-8">
+  <link href="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/SlidesAndArticles/style.css" rel="stylesheet" type="text/css"/>
+  
+  <!-- Slides style -->
+  <link href="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/SlidesAndArticles/style_slides.css" rel="stylesheet" type="text/css"/>
+  
+  <!-- Script for catching JS errors -->
+  <script src="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/error_alert.js"></script>
+
+  <!-- Slides functionality needs the total number of slides -->
+  <script>var num_slides = 3</script>
+  <script src="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/SlidesAndArticles/slide_nav.js"></script>
+  
+  <!-- MathJax -->
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+  <script src="file:///Users/bryan/Dropbox/ProgramingProjects/WebDev/mathjax_config.js"></script>
+</head>
+<body style="zoom:175%">
+  
+
+  <!-- Begin Slides -->
+
+  <section class="slide" id="1" style="text-align:center">
+    <div class="body">
+      <h1>
+        <br /><br /><br /><br /><br />
+        An Example Presentation
+      </h1>
+      <h3 style="font-weight:normal">By Bryan Clifford</h3>
+    </div>
+    <div class="footer" style="text-align:right"></div> 
+  </section>
+  
+
+  <section class="slide" id="2">
+    <div class="body">
+      <h2>Some Equations You May Have Heard Of</h2>
+      <hr />
+      Have you heard of the plank equation $E = \hbar\omega$?
+
+      How about this one?
+      \begin{equation}
+        E = \gamma m c^2 \ge 0
+      \end{equation}
+
+      Or this one?
+      \begin{equation}
+        s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
+      \end{equation}
+    </div>
+    <div class="footer" style="text-align:right">2/3</div> 
+  </section>
+
+
+  <section class="slide" id="3">
+    <div class="body">
+      <h2>How About a Theorem and Definition?</h2>
+      <hr />
+      Here's a theorem:
+      <div class="theorem">
+        There are no natural numbers
+        $\natural = (1, 2, 3, \ldots)$
+        $x$, $y$, and $z$ such that
+        $x^n + y^n = z^n$, in which $n$
+        is a natural number greater than 2.
+      </div>
+      <div class="definition">
+        A set $C$ is <i>convex</i> if for all
+        $x,y \in C$ and for all
+        $\alpha \in [0,1]$ the point
+        $\alpha x + (1-\alpha) y \in C$.
+      </div>
+    </div>
+    <div class="footer" style="text-align:right">3/3</div> 
+  </section>
+
+  <!-- End Slides -->
+
+</body>
+</html>

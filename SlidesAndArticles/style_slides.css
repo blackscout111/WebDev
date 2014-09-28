@@ -1,0 +1,26 @@
+/* specify a slide */
+section.slide {
+    page-break-inside: avoid;
+    page-break-after: always;
+    height: 98%;
+    padding: 1% 6% 1% 6%;
+    margin: 1px 0 1px 0;
+}
+section.slide .body{
+    height: 85%;
+}
+section.slide .footer{
+    margin: 0 -3% 0 -3%;
+    border: none;
+    font-size: 70%;
+    vertical-align: bottom;
+}
+
+/* specifies printing of a page */
+@media print{
+    section.slide{
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+}

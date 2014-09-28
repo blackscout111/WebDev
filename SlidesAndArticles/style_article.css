@@ -1,0 +1,16 @@
+/* specify an article */
+section.article {
+    margin-left:10em;
+    width:42em;
+}
+section.article img, table {
+    page-break-inside: avoid;
+}
+
+/* specifies printing of a page */
+@media print{
+    section.article{
+        margin: .5in .5in .5in .5in;
+        max-width: 100%;
+    }
+}
