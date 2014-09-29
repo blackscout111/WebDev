@@ -2,18 +2,20 @@
 section.slide {
     page-break-inside: avoid;
     page-break-after: always;
-    height: 98%;
+    height: 100%;
     padding: 1% 6% 1% 6%;
-    margin: 1px 0 1px 0;
+    /*border: 1px solid black;*/
 }
-section.slide .body{
-    height: 85%;
-}
-section.slide .footer{
-    margin: 0 -3% 0 -3%;
-    border: none;
+#footer{
+    position: fixed;
+    height: 6%;
+    width: 92%;
+    right: 3%;
+    bottom: 3%;
+    padding: 0 1% 0 1%;
     font-size: 70%;
-    vertical-align: bottom;
+    /*border: 1px solid blue;*/
+    /*color: blue;*/
 }
 
 /* specifies printing of a page */

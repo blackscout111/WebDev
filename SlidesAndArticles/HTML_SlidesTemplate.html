@@ -2,24 +2,34 @@
 <head>
   <title>HTML Slides Template</title>
   <meta charset="utf-8">
-  <link href="style.css" rel="stylesheet" type="text/css"/>
-  
+  <link href="https://raw.githubusercontent.com/blackscout111/WebDev/master/SlidesAndArticles/style.css" rel="stylesheet" type="text/css"/>
+  <!-- <link href="style.css" rel="stylesheet" type="text/css"/> -->
+ 
   <!-- Slides style -->
+  <!-- <link href="https://raw.githubusercontent.com/blackscout111/WebDev/master/SlidesAndArticles/style_slides.css" rel="stylesheet" type="text/css"/> -->
   <link href="style_slides.css" rel="stylesheet" type="text/css"/>
   
   <!-- Script for catching JS errors -->
-  <script src="../error_alert.js"></script>
-
-  <!-- Slides functionality needs the total number of slides -->
-  <script>var num_slides = 3</script>
-  <script src="slide_nav.js"></script>
+  <script src="https://raw.githubusercontent.com/blackscout111/WebDev/master/error_alert.js"></script>
+  <!-- <script src="../error_alert.js"></script> -->
   
   <!-- MathJax -->
   <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-  <script src="../mathjax_config.js"></script>
+  <script src="https://raw.githubusercontent.com/blackscout111/WebDev/master/mathjax_config.js"></script>
+  <!-- <script src="../mathjax_config.js"></script> -->
+
+  <!-- Slide footers -->
+  <div id="footer">
+    <div id="slide_num" style="text-align:right"></div>
+  </div> 
+
+  <!-- Slides functionality needs the total number of slides -->
+  <script>var num_slides = 5</script>
+  <script src="https://raw.githubusercontent.com/blackscout111/WebDev/master/SlidesAndArticles/slide_nav.js"></script>
+  <!-- <script src="slide_nav.js"></script> -->
+
 </head>
 <body style="zoom:175%">
-  
 
   <!-- Begin Slides -->
 
@@ -31,50 +41,71 @@
       </h1>
       <h3 style="font-weight:normal">By Bryan Clifford</h3>
     </div>
-    <div class="footer" style="text-align:right"></div> 
+    <div class="footer"></div> 
+  </section>
+
+
+  <section class="slide" id="2">
+    <h2>Instructions</h2>
+    <hr />
+    <ul>
+      <li>
+        Design slides in the html:
+        <ul>
+          <li>Slides go in <code>section class="slide"</code> elements</li>
+          <li>The <code>id</code> attribute is the slide number. Set the total
+            number of slides with the global js variable <code>num_slides</code>.</li>
+        </ul>
+      </li>
+      <li>
+        Navigate through the slide show using the left and right arrow keys or
+        by pressing "<b>g</b>" on the keyboard to jump to a slide.
+      </li>
+    </ul>
   </section>
   
 
-  <section class="slide" id="2">
-    <div class="body">
-      <h2>Some Equations You May Have Heard Of</h2>
-      <hr />
-      Have you heard of the plank equation $E = \hbar\omega$?
+  <section class="slide" id="3">
+    <h2>Use <i>MathJax</i> for Equations</h2>
+    <hr />
+    Have you heard of the plank equation $E = \hbar\omega$?
 
-      How about this one?
-      \begin{equation}
-        E = \gamma m c^2 \ge 0
-      \end{equation}
+    How about this one?
+    \begin{equation}
+      E = \gamma m c^2 \ge 0
+    \end{equation}
 
-      Or this one?
-      \begin{equation}
-        s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
-      \end{equation}
-    </div>
-    <div class="footer" style="text-align:right">2/3</div> 
+    Or this one?
+    \begin{equation}
+      s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
+    \end{equation}
   </section>
 
 
-  <section class="slide" id="3">
-    <div class="body">
-      <h2>How About a Theorem and Definition?</h2>
-      <hr />
-      Here's a theorem:
-      <div class="theorem">
-        There are no natural numbers
-        $\natural = (1, 2, 3, \ldots)$
-        $x$, $y$, and $z$ such that
-        $x^n + y^n = z^n$, in which $n$
-        is a natural number greater than 2.
-      </div>
-      <div class="definition">
-        A set $C$ is <i>convex</i> if for all
-        $x,y \in C$ and for all
-        $\alpha \in [0,1]$ the point
-        $\alpha x + (1-\alpha) y \in C$.
-      </div>
+  <section class="slide" id="4">
+    <h2>Use <code>divs</code> for Definitions and Theorems</h2>
+    <hr />
+    Here's a theorem:
+    <div class="theorem">
+      There are no natural numbers
+      $\natural = (1, 2, 3, \ldots)$
+      $x$, $y$, and $z$ such that
+      $x^n + y^n = z^n$, in which $n$
+      is a natural number greater than 2.
     </div>
-    <div class="footer" style="text-align:right">3/3</div> 
+    <div class="definition">
+      A set $C$ is <i>convex</i> if for all
+      $x,y \in C$ and for all
+      $\alpha \in [0,1]$ the point
+      $\alpha x + (1-\alpha) y \in C$.
+    </div>
+  </section>
+
+  <section class="slide" id="5" style="text-align:center">
+    <h1>
+      <br /><br /><br /><br /><br />
+      Questions?
+    </h1>
   </section>
 
   <!-- End Slides -->

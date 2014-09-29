@@ -1,6 +1,8 @@
 // Current slide number
 var cur_slide = 1;
 
+
+//______________________________________________________________________________
 // Get a key press and navigate to the next or previous slide
 document.onkeydown = function (e) {
 
@@ -46,5 +48,13 @@ document.onkeydown = function (e) {
 
     location.href = "#"+cur_slide;         //Go to the target element.
     history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
+  }
+
+  // Set the page number
+  if (cur_slide > 1) {
+    document.getElementById("slide_num").innerHTML = cur_slide+"/"+num_slides;
+  }
+  else{
+    document.getElementById("slide_num").innerHTML = ""; 
   }
 };
