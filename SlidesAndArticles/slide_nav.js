@@ -1,6 +1,14 @@
 // Current slide number
 var cur_slide = 1;
 
+// Get footer and clean it
+var footer = document.getElementById("footer").innerHTML;
+var footer_on = true;
+
+// Turn off footer
+document.getElementById("footer").innerHTML = "";
+footer_on = false;
+
 
 //______________________________________________________________________________
 // Get a key press and navigate to the next or previous slide
@@ -43,18 +51,23 @@ document.onkeydown = function (e) {
   if (doMove) {
     doMove = false;
 
+    // Set the page number
+    if (cur_slide > 1) {
+      if (!footer_on){
+        document.getElementById("footer").innerHTML = footer;
+        footer_on = true;
+      }
+      document.getElementById("slide_num").innerHTML = cur_slide+"/"+num_slides;
+    }
+    else{
+      document.getElementById("footer").innerHTML = "";
+      footer_on = false;
+    }
+
     // @@ debug
     // console.log('Moving to #'+cur_slide);
 
     location.href = "#"+cur_slide;         //Go to the target element.
     history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
-  }
-
-  // Set the page number
-  if (cur_slide > 1) {
-    document.getElementById("slide_num").innerHTML = cur_slide+"/"+num_slides;
-  }
-  else{
-    document.getElementById("slide_num").innerHTML = ""; 
   }
 };

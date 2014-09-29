@@ -15,14 +15,12 @@ section.slide {
     padding: 0 1% 0 1%;
     font-size: 70%;
     /*border: 1px solid blue;*/
-    /*color: blue;*/
 }
 
 /* specifies printing of a page */
 @media print{
     section.slide{
-        margin: 0;
-        border: none;
-        box-shadow: none;
+        height: 98%;
+        /*border: 1px solid black;*/
     }
 }
