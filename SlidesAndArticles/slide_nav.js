@@ -10,6 +10,9 @@
 // Current slide number
 var cur_slide = 1;
 
+// Last slide number
+var last_slide = 0;
+
 // Get footer and clean it
 var footer = document.getElementById("footer").innerHTML;
 var footer_on = true;
@@ -62,11 +65,13 @@ function clickMove (e) {
     if (isMovOk) {
         if ( e.shiftKey  && !e.altKey
              && (cur_slide !== 1) ){ // shift click
+            last_slide = cur_slide;
             --cur_slide;
             doMove = true;
         }
         else if (!e.shiftKey && !e.altKey
                  && (cur_slide !== num_slides) ){ // regular click
+            last_slide = cur_slide;
             ++cur_slide;
             doMove = true;
         }
@@ -102,20 +107,31 @@ function keyMove(e) {
         // console.log("new_slide= "+new_slide);
 
         if (new_slide >=1 && new_slide <=num_slides) {
+            last_slide = cur_slide;
             cur_slide = new_slide;
             doMove = true;
         }
+    }
+
+    // Jump to last slide
+    if (e.keyCode === 66){
+        var new_slide = last_slide;
+        last_slide = cur_slide;
+        cur_slide = new_slide;
+        doMove = true;
     }
 
     // Move to next or previous slide
     if (isMovOk) {
         if ( ( e.keyCode === 37 )                   // left arrow
             && cur_slide !== 1) {
+            last_slide = cur_slide;
             --cur_slide;
             doMove = true;
         }
         else if ( ( e.keyCode === 39 )              // right arrow
             && cur_slide !== num_slides) {
+            last_slide = cur_slide;
             ++cur_slide;
             doMove = true;
         }
