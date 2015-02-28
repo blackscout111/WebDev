@@ -24,3 +24,39 @@ section.slide {
         /*border: 1px solid black;*/
     }
 }
+
+/* Slide element layout styles */
+  div.onePanel {
+    float: left;
+    width: 100%;
+    height: 75%;
+    text-align: center;
+  }
+  div.onePanel {
+    float: left;
+    width: 100%;
+    height: 75%;
+    text-align: center;
+  }
+  div.twoPanel {
+    float: left;
+    width: 50%;
+    height: 75%;
+    text-align: center;
+  }
+  div.twoPanelLeft {
+    float: left;
+    width: 35%;
+    height: 75%;
+    text-align: center;
+  }
+  div.twoPanelRight {
+    float: right;
+    width: 65%;
+    height: 75%;
+    text-align: center;
+  }
+  table tr td {
+    padding-left: 1em;
+    padding-top: 1em;
+  }
