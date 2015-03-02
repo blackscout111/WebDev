@@ -29,25 +29,25 @@ section.slide {
   div.onePanel {
     float: left;
     width: 100%;
-    height: 75%;
+    height: 70%;
     text-align: center;
   }
   div.twoPanel {
     float: left;
     width: 50%;
-    height: 75%;
+    height: 70%;
     text-align: center;
   }
   div.twoPanelLeft {
     float: left;
     width: 35%;
-    height: 75%;
+    height: 70%;
     text-align: center;
   }
   div.twoPanelRight {
     float: right;
     width: 65%;
-    height: 75%;
+    height: 70%;
     text-align: center;
   }
   table tr td {
