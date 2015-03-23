@@ -7,19 +7,44 @@
 //______________________________________________________________________________
 // GLOBALS
 
+// Number of slides
+var num_slides = 0;
+var slides;
+
 // Current slide number
 var cur_slide = 1;
 
 // Last slide number
 var last_slide = 0;
 
-// Get footer and clean it
-var footer = document.getElementById("footer").innerHTML;
-var footer_on = true;
 
-// Turn off footer
-document.getElementById("footer").innerHTML = "";
-footer_on = false;
+
+
+//------------------------------------------------------------------------------
+// Initialize the slide show
+function initializeSlides() {
+    slides = document.getElementsByClassName("slide");
+    num_slides = slides.length;
+
+    var footer_beg = '<div id="footer">'+
+                     '  <div id="footer-left" style="float:left; width:10%; text-align:left;">'+
+                          footer_left+
+                     '  </div>'+
+                     '  <div id="footer-middle" style="float:left; width:80%; text-align:center;">'+
+                          footer_middle+
+                     '  </div>'+
+                     '  <div id="slide_num" style="float:left; width:10%; text-align:right;">';
+
+    var footer_end = '/'+num_slides+'</div></div>';
+
+    if (show_footer) {
+        for (var i=1; i<num_slides; ++i){
+            slides[i].innerHTML += footer_beg+(i+1)+footer_end;
+        }
+    }
+
+    setAspectRatio();
+}
 
 
 
@@ -29,19 +54,6 @@ footer_on = false;
 function moveSlide() {
 
     var url = location.href;  // Save the URL without hash.
-
-    // Set the page number (if the current slide isn't the first slide)
-    if (cur_slide > 1) {
-        if (!footer_on){
-            document.getElementById("footer").innerHTML = footer;
-            footer_on = true;
-        }
-        document.getElementById("slide_num").innerHTML = cur_slide+"/"+num_slides;
-    }
-    else{
-        document.getElementById("footer").innerHTML = "";
-        footer_on = false;
-    }
 
     // @@ debug
     // console.log('Moving to #'+cur_slide);
@@ -147,7 +159,31 @@ function keyMove(e) {
 
 
 
+//------------------------------------------------------------------------------
+function setAspectRatio(){
+    // Get current window dimensions
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    var maxw = (aspect_ratio*h)/w;
+    if (maxw > 1){
+        maxw = 1;
+    }
+
+    console.log("caught window resize: w=" + w + " h=" + h + " maxw=" + maxw*w);
+
+    // Set the new width based on the window height
+    var i =0;
+    for (i=0; i < num_slides; ++i){
+        slides[i].style.maxWidth = maxw*100+"%";
+    }
+};
+
+
+
+
 //______________________________________________________________________________
 // Add event listeners to DOM
 document.addEventListener("keydown",keyMove);
-document.addEventListener("click",clickMove)
+document.addEventListener("click",clickMove);
+window.addEventListener("resize",setAspectRatio);

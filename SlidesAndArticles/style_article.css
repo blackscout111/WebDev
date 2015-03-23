@@ -1,6 +1,7 @@
 body {
     margin-left:10em;
     width:42em;
+    text-align: justify;
 }
 body img, table {
     page-break-inside: avoid;
@@ -8,8 +9,11 @@ body img, table {
 
 /* specifies printing of a page */
 @media print{
-    body {
-        margin: .5in .5in .5in .5in;
-        max-width: 100%;
+    body{
+        margin-left: 12.5%;
+        width: 75%;
     }
+    /*page{
+        margin: 1in 1in 1in 1in;
+    }*/
 }

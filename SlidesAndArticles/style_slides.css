@@ -1,13 +1,15 @@
 /* specify a slide */
 section.slide {
+    position: relative;
     page-break-inside: avoid;
     page-break-after: always;
     height: 100%;
     padding: 1% 6% 1% 6%;
     /*border: 1px solid black;*/
+    margin: 0 auto;
 }
 #footer{
-    position: fixed;
+    position: absolute;
     height: 6%;
     width: 92%;
     right: 3%;
