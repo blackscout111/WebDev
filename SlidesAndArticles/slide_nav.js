@@ -44,6 +44,7 @@ function initializeSlides() {
     }
 
     setAspectRatio();
+    moveSlide();
 }
 
 

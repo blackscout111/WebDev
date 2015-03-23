@@ -1,5 +1,11 @@
+/* slideshow background style */
+body{
+    background-color: black;
+}
+
 /* specify a slide */
 section.slide {
+    background-color: white;
     position: relative;
     page-break-inside: avoid;
     page-break-after: always;
@@ -25,9 +31,18 @@ section.slide {
         height: 98%;
         /*border: 1px solid black;*/
     }
+    body{
+        background-color: white;
+        /*border: 1px solid #00FF00;*/
+    }
 }
 
-/* Slide element layout styles */
+@page{
+    size: auto;
+    margin: 0in 0in 0in 0in;
+}
+
+/* slide element layout styles */
   div.onePanel {
     float: left;
     width: 100%;
