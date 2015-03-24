@@ -194,7 +194,7 @@ function addSrcDirs(){
         objs = document.getElementsByTagName(src_dirs[i]);
 
         for (j=0; j<objs.length; ++j){
-            if (objs[j].src != null){
+            if (objs[j].src === ""){
                 objs[j].src = src_dirs[i+1] + objs[j].getAttribute("filename");
             }
         }
