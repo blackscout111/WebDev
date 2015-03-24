@@ -37,14 +37,15 @@ function initializeSlides() {
 
     var footer_end = '/'+num_slides+'</div></div>';
 
-    if (show_footer) {
-        for (var i=1; i<num_slides; ++i){
+
+    for (var i=0; i<num_slides; ++i){
+        slides[i].id = i+1;
+        if ( show_footer && (i>0) ){
             slides[i].innerHTML += footer_beg+(i+1)+footer_end;
         }
     }
 
     setAspectRatio();
-    moveSlide();
 }
 
 
@@ -171,7 +172,7 @@ function setAspectRatio(){
         maxw = 1;
     }
 
-    console.log("caught window resize: w=" + w + " h=" + h + " maxw=" + maxw*w);
+    // console.log("caught window resize: w=" + w + " h=" + h + " maxw=" + maxw*w);
 
     // Set the new width based on the window height
     var i =0;
