@@ -43,31 +43,39 @@ section.slide {
 }
 
 /* slide element layout styles */
-  div.onePanel {
+div.title {
+    position: relative;
+    top: 30%;
+    /*transform: translateY(-50%);*/
+    width: 100%;
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+div.onePanel {
     float: left;
     width: 100%;
     height: 70%;
     text-align: center;
-  }
-  div.twoPanel {
+}
+div.twoPanel {
     float: left;
     width: 50%;
     height: 70%;
     text-align: center;
-  }
-  div.twoPanelLeft {
+}
+div.twoPanelLeft {
     float: left;
     width: 35%;
     height: 70%;
     text-align: center;
-  }
-  div.twoPanelRight {
+}
+div.twoPanelRight {
     float: right;
     width: 65%;
     height: 70%;
     text-align: center;
-  }
-  table tr td {
+}
+table tr td {
     padding-left: 1em;
     padding-top: 1em;
-  }
+}

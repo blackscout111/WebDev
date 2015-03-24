@@ -1,123 +1,117 @@
 <html>
 <head>
-  <title>HTML Slides Template</title>
-  <meta charset="utf-8">
-  <link href="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/style.css" rel="stylesheet" type="text/css"/>
-  <!-- <link href="style.css" rel="stylesheet" type="text/css"/> -->
- 
-  <!-- Slides style -->
-  <link href="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/style_slides.css" rel="stylesheet" type="text/css"/>
-  <!-- <link href="style_slides.css" rel="stylesheet" type="text/css"/> -->
-  
-  <!-- Script for catching JS errors -->
-  <script src="https://rawgit.com/blackscout111/WebDev/master/error_alert.js"></script>
-  <!-- <script src="../error_alert.js"></script> -->
-  
-  <!-- MathJax -->
-  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-  <script src="https://rawgit.com/blackscout111/WebDev/master/mathjax_config.js"></script>
-  <!-- <script src="../mathjax_config.js"></script> -->
+    <title>HTML Slides Template</title>
+    <meta charset="utf-8">
+    <link href="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/style.css" rel="stylesheet" type="text/css"/>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"/> -->
 
-  <!-- Slides functionality -->
-  <script>
+    <!-- Slides style -->
+    <!-- <link href="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/style_slides.css" rel="stylesheet" type="text/css"/> -->
+    <link href="style_slides.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Script for catching JS errors -->
+    <script src="https://rawgit.com/blackscout111/WebDev/master/error_alert.js"></script>
+    <!-- <script src="../error_alert.js"></script> -->
+
+    <!-- MathJax -->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+    <script src="https://rawgit.com/blackscout111/WebDev/master/mathjax_config.js"></script>
+    <!-- <script src="../mathjax_config.js"></script> -->
+
+    <!-- Slides functionality -->
+    <script>
     var aspect_ratio  = 4/3;
     var show_footer   = true;
     var footer_left   = "Date";
     var footer_middle = "Bryan Clifford";
-  </script>
-  <script src="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/slide_nav.js"></script>
-  <!-- <script src="slide_nav.js"></script> -->
+    </script>
+    <script src="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/slide_nav.js"></script>
+    <!-- <script src="slide_nav.js"></script> -->
 
 </head>
 <body style="zoom:130%;">
 
-  <!-- Begin Slides -->
+    <!-- Begin Slides -->
 
-  <section class="slide">
-    <div class="onePanel">
-      <h1>
-        <br /><br /><br /><br /><br />
-        An Example Presentation
-      </h1>
-      <h3 style="font-weight:normal">By Bryan Clifford</h3>
-    </div>
-    <div class="footer"></div> 
-  </section>
+    <section class="slide">
+        <div class="title">
+            <h1>An Example Presentation</h1>
+            <h3 style="font-weight:normal">By Bryan Clifford</h3>
+        </div>
+        <div class="footer"></div> 
+    </section>
 
 
-  <section class="slide">
-    <h2>Instructions</h2>
-    <hr />
-    <ul>
-      <li>
-        Design slides in the html:
+    <section class="slide">
+        <h2>Instructions</h2>
+        <hr />
         <ul>
-          <li>Slides go in <code>section class="slide"</code> elements</li>
-          <li>The <code>id</code> attribute is the slide number. Set the total
-            number of slides with the global js variable <code>num_slides</code>.</li>
-        </ul>
-      </li>
-      <li>
-        Navigate through the slideshow clicking, shift-clicking, using the left and right arrow keys, or
-        by pressing "<b>g</b>" on the keyboard to jump to a slide.
-        <ul>
-            <li><b>Tip:</b> Hold the <code>alt</code> key to ignore a click.</li>
-        </ul>
-        Press "<b>b</b>" on the keyboard to jump between the current and last slide.
-      </li>
-    </ul>
-  </section>
-  
-
-  <section class="slide">
-    <h2>Use <i>MathJax</i> for Equations</h2>
-    <hr />
-    Have you heard of the plank equation $E = \hbar\omega$?
-
-    How about this one?
-    \begin{equation}
-      E = \gamma m c^2 \ge 0
-    \end{equation}
-
-    Or this one?
-    \begin{equation}
-      s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
-    \end{equation}
-  </section>
+            <li>
+                Design slides in the html:
+                <ul>
+                    <li>Slides go in <code>section class="slide"</code> elements</li>
+                    <li>The <code>id</code> attribute is the slide number. Set the total
+                        number of slides with the global js variable <code>num_slides</code>.</li>
+                    </ul>
+                </li>
+                <li>
+                    Navigate through the slideshow clicking, shift-clicking, using the left and right arrow keys, or
+                    by pressing "<b>g</b>" on the keyboard to jump to a slide.
+                    <ul>
+                        <li><b>Tip:</b> Hold the <code>alt</code> key to ignore a click.</li>
+                    </ul>
+                    Press "<b>b</b>" on the keyboard to jump between the current and last slide.
+                </li>
+            </ul>
+        </section>
 
 
-  <section class="slide">
-    <h2>Use <code>divs</code> for Definitions and Theorems</h2>
-    <hr />
-    Here's a theorem:
-    <div class="theorem">
-      There are no natural numbers
-      $\natural = (1, 2, 3, \ldots)$
-      $x$, $y$, and $z$ such that
-      $x^n + y^n = z^n$, in which $n$
-      is a natural number greater than 2.
-    </div>
-    <div class="definition">
-      A set $C$ is <i>convex</i> if for all
-      $x,y \in C$ and for all
-      $\alpha \in [0,1]$ the point
-      $\alpha x + (1-\alpha) y \in C$.
-    </div>
-  </section>
+        <section class="slide">
+            <h2>Use <i>MathJax</i> for Equations</h2>
+            <hr />
+            Have you heard of the plank equation $E = \hbar\omega$?
 
-  <section class="slide">
-    <div class="onePanel">
-      <h1>
-        <br /><br /><br /><br /><br />
-        Questions?
-      </h1>
-    </div>
-  </section>
+            How about this one?
+            \begin{equation}
+            E = \gamma m c^2 \ge 0
+            \end{equation}
 
-  <!-- End Slides -->
+            Or this one?
+            \begin{equation}
+            s(\k,t) = \int_{-\infty}^{\infty} { \rho( \x, t ) e^{-i2\pi \k \cdot \x } d\x }
+            \end{equation}
+        </section>
 
-  <!-- Initialization -->
-  <script>initializeSlides();</script>
 
-</body>
-</html>
+        <section class="slide">
+            <h2>Use <code>divs</code> for Definitions and Theorems</h2>
+            <hr />
+            Here's a theorem:
+            <div class="theorem">
+                There are no natural numbers
+                $\natural = (1, 2, 3, \ldots)$
+                $x$, $y$, and $z$ such that
+                $x^n + y^n = z^n$, in which $n$
+                is a natural number greater than 2.
+            </div>
+            <div class="definition">
+                A set $C$ is <i>convex</i> if for all
+                $x,y \in C$ and for all
+                $\alpha \in [0,1]$ the point
+                $\alpha x + (1-\alpha) y \in C$.
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="title">
+                <h1>Questions?</h1>
+            </div>
+        </section>
+
+        <!-- End Slides -->
+
+        <!-- Initialization -->
+        <script>initializeSlides();</script>
+
+    </body>
+    </html>
