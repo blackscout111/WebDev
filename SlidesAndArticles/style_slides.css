@@ -79,3 +79,8 @@ table tr td {
     padding-left: 1em;
     padding-top: 1em;
 }
+div.float-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

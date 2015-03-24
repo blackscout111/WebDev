@@ -46,6 +46,7 @@ function initializeSlides() {
     }
 
     setAspectRatio();
+    addSrcDirs();
 }
 
 
@@ -184,8 +185,29 @@ function setAspectRatio(){
 
 
 
+//------------------------------------------------------------------------------
+function addSrcDirs(){
+    var objs = null;
+    var i=null, j=null;
+
+    for (i=0; i<src_dirs.length/2; i+=2){
+        objs = document.getElementsByTagName(src_dirs[i]);
+
+        for (j=0; j<objs.length; ++j){
+            if (objs[j].src != null){
+                objs[j].src = src_dirs[i+1] + objs[j].getAttribute("filename");
+            }
+        }
+    }
+}
+
+
+
+
 //______________________________________________________________________________
 // Add event listeners to DOM
 document.addEventListener("keydown",keyMove);
 document.addEventListener("click",clickMove);
 window.addEventListener("resize",setAspectRatio);
+
+

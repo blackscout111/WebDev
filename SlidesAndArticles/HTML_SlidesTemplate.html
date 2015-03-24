@@ -24,6 +24,7 @@
     var show_footer   = true;
     var footer_left   = "Date";
     var footer_middle = "Bryan Clifford";
+    var src_dirs      = ["img","https://www.google.com/images/srpr/"];
     </script>
     <script src="https://rawgit.com/blackscout111/WebDev/master/SlidesAndArticles/slide_nav.js"></script>
     <!-- <script src="slide_nav.js"></script> -->
@@ -99,6 +100,27 @@
                 $x,y \in C$ and for all
                 $\alpha \in [0,1]$ the point
                 $\alpha x + (1-\alpha) y \in C$.
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>Images &amp; Videos are Easy</h2>
+            <hr />
+            <div class="twoPanel" style="text-align:left;">
+                <ul>
+                    <li />Its easy to insert images/videos
+                    <li />You don't even need to give the whole path name. The 
+                        variable <code>src_dirs</code> lets you set up source 
+                        directories for tags that you specify.
+                    <li />Once you've set up the source directory, just use the
+                        <code>filename</code> attribute instead of
+                        the <code>src</code> attribute.
+                </ul>
+            </div>
+            <div class="twoPanel">
+                <div class="float-middle">
+                    <img filename="logo11w.png"/>
+                </div>
             </div>
         </section>
 
